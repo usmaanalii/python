@@ -1,7 +1,9 @@
 import re
 
+
 # Accesion names
-gene_names = ['xkn59438', 'yhdck2', 'eihd39d9', 'chdsye847', 'hedle3455', 'xjhd53e', '45da', 'de37dp']
+gene_names = ['xkn59438', 'yhdck2', 'eihd39d9',
+              'chdsye847', 'hedle3455', 'xjhd53e', '45da', 'de37dp']
 
 print('Contains 5:')
 for gene in gene_names:
@@ -15,7 +17,8 @@ for gene in gene_names:
 
 print('\nContains d with an e anywhere after it:')
 for gene in gene_names:
-    if re.search(r'(d.*e)', gene):  # . represents 'any character', * represents '0 or more'
+    # . represents 'any character', * represents '0 or more'
+    if re.search(r'(d.*e)', gene):
         print(gene)
 
 print('\nContains d and e seperated by a single letter:')
@@ -35,7 +38,8 @@ for gene in gene_names:
 
 print('\nStarts with x or y and ends with e:')
 for gene in gene_names:
-    if re.search(r'^(x|y)', gene) and re.search(r'e$', gene):  # textbook answer: ^(x|y).*e$
+    # textbook answer: ^(x|y).*e$
+    if re.search(r'^(x|y)', gene) and re.search(r'e$', gene):
         print(gene)
 
 print('\nContains three or more numbers in a row:')
@@ -49,9 +53,6 @@ for gene in gene_names:
         print(gene)
 
 # Double digest
-# Double digest
-import re
-
 dna = open('dna.txt').read().rstrip('\n')
 
 cuts = [0]

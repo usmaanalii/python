@@ -1,7 +1,8 @@
 import os
-os.chdir('') # input directory where files are located
+os.chdir('')  # input directory where files are located
 
 data_file = open('data.csv')
+
 
 # AT Content
 def get_percent(seq, residue_list=["A", "I", "L", "M", "F", "W", "Y", "V"]):
@@ -13,6 +14,7 @@ def get_percent(seq, residue_list=["A", "I", "L", "M", "F", "W", "Y", "V"]):
         residue_count += (seq.upper().count(residue.upper()))
 
     return residue_count / seq_length
+
 
 for line in data_file:
     columns = line.rstrip("\n").split(",")

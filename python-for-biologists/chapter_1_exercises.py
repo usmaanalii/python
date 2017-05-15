@@ -27,16 +27,21 @@ def restriction(sequence, cut):
     print('The length of the first fragment is ' + str(len(pre)))
     print('The length of the second fragment is ' + str(len(post)))
 
+
 restriction(dna_seq, 'GAAT')
 
 # splicing out introns, part one
-genomic_dna = 'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATGCTATCATCGATCGATATCGATGCATCGACTACTAT'
+genomic_dna = 'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGC\
+               TACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATG\
+               CTATCATCGATCGATATCGATGCATCGACTACTAT'
 
 exon_1 = genomic_dna[0:62]
 exon_2 = genomic_dna[90:10000]
-coding_percentage = round((((len(exon_1) + len(exon_2)) / len(genomic_dna)) * 100), 2)
+coding_percentage = round((((len(exon_1) +
+                          len(exon_2)) / len(genomic_dna)) * 100), 2)
 
 print('The coding DNA is ' + exon_1 + exon_2)
 print('The percentage of coding DNA is ' + str(coding_percentage) + '%\n')
 
-print('Coding bases in uppercase:\n' + exon_1.lower() + genomic_dna[63:91] + exon_2.lower())
+print('Coding bases in uppercase:\n' + exon_1.lower() +
+      genomic_dna[63:91] + exon_2.lower())

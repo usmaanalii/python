@@ -6,6 +6,7 @@ def get_percent(seq, residue):
 
     return round((residue_count / seq_length) * 100)
 
+
 assert get_percent("MSRSLLLRFLLFLLLLPPLP", "M") == 5
 assert get_percent("MSRSLLLRFLLFLLLLPPLP", "r") == 10
 assert get_percent("MSRSLLLRFLLFLLLLPPLP", "L") == 50
@@ -22,6 +23,7 @@ def get_percent_2(seq, residue_list=["A", "I", "L", "M", "F", "W", "Y", "V"]):
         residue_count += (seq.upper().count(residue.upper()))
 
     return round((residue_count / seq_length) * 100)
+
 
 assert get_percent_2("MSRSLLLRFLLFLLLLPPLP", ["M"]) == 5
 assert get_percent_2("MSRSLLLRFLLFLLLLPPLP", ['M', 'L']) == 55

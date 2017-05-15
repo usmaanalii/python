@@ -1,6 +1,6 @@
 # processing DNA in a file
 import os
-os.chdir('') # input directory where the files are located
+os.chdir('')  # input directory where the files are located
 
 dna_file = open('input.txt')
 
@@ -33,7 +33,8 @@ for line in positions_file:
     exon = genomic_dna[start:stop]
     coding_sequence = coding_sequence + exon
 
-    print('The coding sequence after slice ' + str(i) + ' is: ' + coding_sequence)
+    print('The coding sequence after slice ' +
+          str(i) + ' is: ' + coding_sequence)
 
 
 coding_sequence_file = open('coding_sequences.txt', 'w')
