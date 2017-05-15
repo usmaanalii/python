@@ -16,8 +16,8 @@ print fat_cat
 
 # try this out
 # while True:
-#	for i in ["/", "-", "|", "\\", ":|"]:
-#		print "%s\r" % i,
+# for i in ["/", "-", "|", "\\", ":|"]:
+# print "%s\r" % i,
 
 # Study drills
 

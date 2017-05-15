@@ -26,7 +26,7 @@ target.close()
 
 # Study Drills
 txt = open(filename)
-print txt.read() # read the contents of the file
+print txt.read()  # read the contents of the file
 
 # target.write(line1)
 # target.write("\n")

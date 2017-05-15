@@ -9,7 +9,7 @@ print "So, you're %r old, %r tall and %r heavy" % (age, height, weight)
 
 # Study drills
 print "Favourite player?",
-player = raw_input("Name... ") # using a prompt
+player = raw_input("Name... ")  # using a prompt
 print"Second favourite?",
 second = raw_input()
 print "%r is better than %r dummy!" % (second, player)
