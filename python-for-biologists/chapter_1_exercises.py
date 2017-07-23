@@ -38,7 +38,7 @@ genomic_dna = 'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGC\
 exon_1 = genomic_dna[0:62]
 exon_2 = genomic_dna[90:10000]
 coding_percentage = round((((len(exon_1) +
-                          len(exon_2)) / len(genomic_dna)) * 100), 2)
+                             len(exon_2)) / len(genomic_dna)) * 100), 2)
 
 print('The coding DNA is ' + exon_1 + exon_2)
 print('The percentage of coding DNA is ' + str(coding_percentage) + '%\n')
