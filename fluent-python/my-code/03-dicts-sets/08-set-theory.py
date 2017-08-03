@@ -1,4 +1,5 @@
 # * Set theory
+from unicodedata import name
 # 	- frozenset -> immutable sibling
 # 	- collection of unique objects
 # 	- must be hashable (frozenset is but set isn't)
@@ -29,3 +30,20 @@ found = len(set(needles) & set(haystack))
 found = len(set(needles).intersection(haystack))
 
 # ** set literals
+# 	- set() -> empty set since {} is empty dict
+s = {1}
+type(s)
+s
+s.pop()
+s
+
+# literal {1, 2} definiton is faster than set([1, 2])
+
+# frozenset has no special syntax so the constructor needs to be used
+frozenset(range(10))
+
+# ** set comprehensions
+
+# %% Example 3.13 - Build a set of Latin-1 chars that have "SIGN" in their
+# 					unicode names
+[chr(i) for i in range(32, 256) if 'SIGN' in name(chr(i), '')]
