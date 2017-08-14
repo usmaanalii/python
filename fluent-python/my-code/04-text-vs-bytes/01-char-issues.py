@@ -1,6 +1,6 @@
 # Text Versus Bytes
-#   - Python 3 changed strings of human text and seq. of raw bytes
-#   - No longer implicitly convert between the two
+#   - Python 3 changed strings of human text and seq. of raw bytes0
+#   - No longer implicitly 0convert between the two
 
 # * Character issues
 #   - string -> sequence of characters (but what is a character)
