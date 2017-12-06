@@ -11,21 +11,21 @@ codes = []
 for symbol in symbols:
     codes.append(ord(symbol))
 
-codes
+codes  # [36, 162, 163, 165, 8364, 164]
 
 # Example 2.2 - Build a list of Unicode codepoints from a string, take two
 symbols = '$¢£¥€¤'
 codes = [ord(symbol) for symbol in symbols]
-codes
+codes  # [36, 162, 163, 165, 8364, 164]
 
 # ** Listcomps versus map and filter
 
 # Example 2.3 - The same list built by a listcomp and a map/filter composition
 symbols = '$¢£¥€¤'
 beyond_ascii = [ord(s) for s in symbols if ord(s) > 127]
-beyond_ascii
+beyond_ascii  # [162, 163, 165, 8364, 164]
 beyond_ascii = list(filter(lambda c: c > 127, map(ord, symbols)))
-beyond_ascii
+beyond_ascii  # [162, 163, 165, 8364, 164]
 
 # ** Cartesian products
 
